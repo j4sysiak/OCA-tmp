@@ -55,7 +55,7 @@ public class Test {
         manager = (C1_Manager) employee;
         s= manager.salary;
 
-
+ssss
 
         System.out.println("sssssssssssssssss");
     }
