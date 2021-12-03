@@ -37,25 +37,28 @@ public class Test {
     public static void main(String ... args)  {
 
         C1_Manager manager = new C1_Manager();
-        int s=manager.salary;
+        int s=manager.salary;   // odpalany zawsze w Manager
+        manager.projektyManageraTopSecret();  // odpalany w Manager bo nie ma w Employee
+        manager.displayC2(); // odpalany w Employee bo nie ma w Manager
+        manager.displayI();  // odpalany w Employee bo nie ma w Manager
+        manager.bhp();       // odpalany w Manager bo jest @Override
+
+        // byte <- (byte)short <- (short)int <- (int)long <- (long)float <- (float)double
+        // Manager <- (Manager)Employee <- (Employee)Object
+
+        C2_Employee emplManag = new C1_Manager();
+        s=emplManag.salary;  // odpalany zawsze w Employee
+        emplManag.displayI();  // odpalany w Employee bo nie jest @Override w Manager
+        emplManag.displayC2(); // odpalany w Employee bo nie jest @Override w Manager
+        emplManag.bhp();  // odpalany w Manager bo jest @Override
+       // emplManag.projektyManageraTopSecret()   niewidoczny - dostęp tylko dla manager
+
+        manager = (C1_Manager) emplManag;
+        s=manager.salary;
         manager.projektyManageraTopSecret();
         manager.displayC2();
         manager.displayI();
         manager.bhp();
-
-        // byte <- (byte)short <- (short)int <- (int)long <- (long)float <- (float)double
-
-        Short sh = new Short((short) 100);
-        Byte b =   sh.byteValue();
-
-        // Manager <- (Manager)Employee <- (Employee)Object
-
-        C2_Employee employee = new C1_Manager();
-
-        manager = (C1_Manager) employee;
-        s= manager.salary;
-
-ssss
 
         System.out.println("sssssssssssssssss");
     }
