@@ -8,7 +8,7 @@ interface I {
     public void displayI();
 }
 
- abstract class C2_Employee implements I {
+abstract class C2_Employee implements I {
     int salary=2212;
 
     public void displayC2() {
