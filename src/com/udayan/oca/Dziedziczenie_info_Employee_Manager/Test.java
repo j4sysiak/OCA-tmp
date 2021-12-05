@@ -56,9 +56,10 @@ public class Test {
 //        List<String> list2 = new ArrayList();
 //        AbstractList<String> aList = (AbstractList)list2;
 
-
         C2_Employee obj1 = new C1_Manager();  //niepełny obiekt Manager (zbudowany na fundamentach Employee)  (pokaże tylko w Manager metody @Override, a w Employee wszystkie metody)
-     //   I obj2 = new C2_Employee();  //'C2_Employee' is abstract; cannot be instantiated
+        ((C1_Manager)obj1).projektyManageraTopSecret(); //wymuszenie uruchomienia metody w Manager, która nie jest @Override
+
+        //   I obj2 = new C2_Employee();  //'C2_Employee' is abstract; cannot be instantiated
         I obj2 = new C1_Manager();  //niepełny obiekt Managera (zbudowany na fundamentach I) (pokaże tylko metody (z interfejsu I) zaimplementowane w Manager lub Employee )
         //int x=obj2.salary;   // XXXXXXX niewidoczny XXXXXX
         //obj2.projektyManageraTopSecret();  // XXXXXXX niewidoczny XXXXXX
@@ -67,7 +68,7 @@ public class Test {
         //obj2.bhp();       // XXXXXXX niewidoczny XXXXXX
 
         // C2_Employee s = obj2;  // Tylko w przypadku interfejsu: XXXXXXXXX Required type: C2_Employee  Provided: I  XXXXXXXXXXXXXX
-        C2_Employee s = (C2_Employee)obj2;   //  s to będzie typowy niepełny obiekt Managera  (zbudowany z poziomu interface na fundamentach Employee)
+        C2_Employee s = (C2_Employee) obj1;   //  s to będzie typowy niepełny obiekt Managera  (zbudowany z poziomu interface na fundamentach Employee)
         int x = s.salary;  // odpalany zawsze w Employee
         s.displayC2();     // odpalany w Employee, bo nie ma w @Override Manager
         s.displayI();      // odpalany w Employee, bo nie ma w @Override Manager
@@ -93,6 +94,7 @@ public class Test {
         emplManag.displayC2(); // odpalany w Employee bo nie jest @Override w Manager
         emplManag.bhp();       // odpalany w Manager bo jest @Override
        // emplManag.projektyManageraTopSecret()  XXXXXXX niewidoczny - dostęp tylko dla pełnego Managera XXXXXX
+        ((C1_Manager)emplManag).projektyManageraTopSecret(); //wymuszenie uruchomienia metody w Manager, która nie jest @Override
 
 
         // byte <- (byte)short <- (short)int <- (int)long <- (long)float <- (float)double
