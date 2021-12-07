@@ -75,8 +75,8 @@ public class Test {
         s.bhp();           // odpalany w Manager bo jest @Override
         // s.projektyManageraTopSecret()  XXXXXXX niewidoczny - dostęp tylko dla pełnego objektu Manager XXXXXX
 
-
         I t = obj1;  // t -obiekt interfejsu I (widoczne tylko metody zaimplentowane z interfejsu) - obj1 - niepełny Manager (zbudowany na fundamentach Employee)
+                     // ponieważ metoda z I displayI() jest zaimplementowana jest tylko w C2_Employee, więc ją odpalimy
         t.displayI();
 
 
