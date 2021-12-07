@@ -1,5 +1,6 @@
 package com.udayan.oca.stream;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -75,12 +76,26 @@ public class Test {
 //                .collect(Collectors.toList());
 
 
-        String name = customers.stream()
-                /* .filter(c -> "Charles B.".equals(c.getName().startsWith("Charles"))) */
-                .map(Customer::getName)
-                .filter(c -> c.startsWith("Charles"))  //convert stream to String
-                .findAny()
-                .orElse("");
+//        String name = customers.stream()
+//                /* .filter(c -> "Charles B.".equals(c.getName().startsWith("Charles"))) */
+//                .map(Customer::getName)
+//                .filter(c -> c.startsWith("Charles"))  //convert stream to String
+//                .findAny()
+//                .orElse("");
+
+
+
+        List<String> list =   Arrays.asList("yearly", "years", "yeast", "yellow", "blues", "astra");
+
+        List filteredList = list.stream()
+                .filter(s -> s.length() == 5)
+                .filter(s -> !s.startsWith("y"))
+                .filter(s -> s.contains("str"))
+                .map(String::toUpperCase)
+                .sorted()
+                .collect(Collectors.toList());
+
+        System.out.println(filteredList);
 
 
         System.out.println("sssssssssssssssssssssss");
