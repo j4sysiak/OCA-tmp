@@ -76,7 +76,7 @@ public class Test {
 
 
         String name = customers.stream()
-//                .filter(c -> "jack".equals(c.getName()))
+                /* .filter(c -> "Charles B.".equals(c.getName().startsWith("Charles"))) */
                 .map(Customer::getName)
                 .filter(c -> c.startsWith("Charles"))  //convert stream to String
                 .findAny()
