@@ -15,10 +15,10 @@ abstract class C2_Employee implements I {
         System.out.println("C2");
     }
 
-      @Override
-      public void displayI() {
-          System.out.println("C2_Employee");
-      }
+//      @Override
+//      public void displayI() {
+//          System.out.println("C2_Employee");
+//      }
 
       public void bhp(){
           System.out.println("bhp");
@@ -35,6 +35,11 @@ class C1_Manager extends C2_Employee {
     @Override
     public void bhp(){
         System.out.println("bhp dla managera");
+    }
+
+    @Override
+    public void displayI() {
+        System.out.println("C1_Manager");
     }
 
 }
@@ -68,7 +73,7 @@ public class Test {
         //obj2.bhp();       // XXXXXXX niewidoczny XXXXXX
 
         // C2_Employee s = obj2;  // Tylko w przypadku interfejsu: XXXXXXXXX Required type: C2_Employee  Provided: I  XXXXXXXXXXXXXX
-        C2_Employee s = (C2_Employee) obj1;   //  s to będzie typowy niepełny obiekt Managera  (zbudowany z poziomu interface na fundamentach Employee)
+        C2_Employee s = (C2_Employee) obj2;   //  s to będzie typowy niepełny obiekt Managera  (zbudowany z poziomu interface na fundamentach Employee)
         int x = s.salary;  // odpalany zawsze w Employee
         s.displayC2();     // odpalany w Employee, bo nie ma w @Override Manager
         s.displayI();      // odpalany w Employee, bo nie ma w @Override Manager
