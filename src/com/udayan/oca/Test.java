@@ -1,27 +1,25 @@
 package com.udayan.oca;
 
-
-
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class Test {
 
     public static void main (String[] args)  {
 
-        char colorCode='y';
-
-        switch (colorCode) {
-            case 'r':
-                int c=100;
+        List<String> lst = Arrays.asList("EN", "FR", "CH", "JP");
+        Iterator<String> itr = lst.iterator();
+        while (itr.hasNext()) {
+            String e = itr.next();
+            if (e == "CH") {
                 break;
-            case 'b':
-                c=10;
-                break;
-            case 'y':
-                c=1;
-                break;
+            }
+            System.out.println(e + " ");
         }
 
-     //   System.out.println(c);
+
+     //   System.out.println("ssssssssssssssssssss");
     }
 
 }

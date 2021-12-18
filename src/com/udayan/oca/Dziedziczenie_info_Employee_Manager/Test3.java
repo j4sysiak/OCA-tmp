@@ -63,7 +63,7 @@ public class Test3 {
         Derived d4 = new Derived(); // pełny Derived
         b4 = d4;  // (prawie) pełny Base - UWAGA: jedna rzecz się zmieni:  b4.test() wskoczy do @Override w Derived  (bo formalnie obiekt b4 wskazuje do Derived)
 
-        int i =b4.base;
+        int i = b4.base;
         b4.base();
         b4.test();  // -----> poleci do Derived, bo tam jest dla tej metody @Override
 
