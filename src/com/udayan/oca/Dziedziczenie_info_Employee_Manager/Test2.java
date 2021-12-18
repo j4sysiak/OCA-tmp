@@ -48,6 +48,8 @@ public class Test2 {
         b1.test111();
         b1.test111();
 
+
+
         SomeEmployeeMatters bs = new SomeEmployeeMatters(); //pełny SomeEmployeeMatters - pokaże wszystkie metody   z Employee i z SomeEmployeeMatters.
                                                             //jeżeli są metody Override w SomeEmployeeMatters to tylko te pokaże
                                                             //pokaże pola z Employee (salary) i z SomeEmployeeMatters (info)
@@ -59,7 +61,7 @@ public class Test2 {
         bs.test22222();
 
 
-        Employee b2 = new SomeEmployeeMatters();  //niepełny SomeEmployeeMatters (pokaże tylko metody override z Employee i wszystkie z Employee)
+        Employee b2 = new SomeEmployeeMatters();  //niepełny SomeEmployeeMatters (pokaże tylko metody Override z Employee i wszystkie z Employee)
         int sa = b2.salary;
         b2.test();     //tylko metody override z Employee
         b2.test111();  //jeżeli nie jest Override to pokaże oryginała Employee
@@ -68,9 +70,12 @@ public class Test2 {
 
         Employee b3 = new Employee();  //pełny Employee
         b3 =  b2;
-        b3.test();
+        int e = b3.salary;
+        //int e = b3.budget  // ERROR - nie pokaże
+        b3.test();  // UWAGA !!!!  -  tutaj odpali metodę nadpisującą (Override) test()  w SomeEmployeeMatters
         b3.test111();
         b3.test111();
+
 
         b1 = (Employee) b2;
         b1.test();
