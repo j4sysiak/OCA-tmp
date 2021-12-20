@@ -60,8 +60,9 @@ public class Test3 {
         d2.derived();
 
         Base b4 = new Base();  // pełny Base
+        b4.test();  // -----> poleci do Base w sposób naturalny
         Derived d4 = new Derived(); // pełny Derived
-        b4 = d4;  // (prawie) pełny Base - UWAGA: jedna rzecz się zmieni:  b4.test() wskoczy do @Override w Derived  (bo formalnie obiekt b4 wskazuje do Derived)
+        b4 = d4;  // (prawie) pełny Base chociaż będzie wskazywał teraz na Derived  - UWAGA: jedna rzecz się zmieni:  b4.test() wskoczy do @Override w Derived  (bo formalnie obiekt b4 wskazuje do Derived)
 
         int i = b4.base;
         b4.base();

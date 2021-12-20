@@ -1,64 +1,24 @@
 package com.udayan.oca;
 
-class Employee {
-    private String name;
-    private int age;
-    private int salary;
 
-    public Employee(String name, int age) {
-        setName(name);
-        setAge(age);
-        setSalary(2000);
+public class Test  {
+
+    public static void main(String ... a)  {
+
+        String[] strs = new String[2];
+        int idx=0;
+
+        for (String s : strs) {
+            strs[idx].concat(" element " + idx);
+            idx++;
+        }
+
+        for (idx=0; idx< strs.length; idx++) {
+            System.out.println(strs[idx]);
+        }
+
+
+        System.out.println("sssssssssssssssss");
     }
-
-    public Employee(String name, int age, int salary) {
-        this(name, age);
-        setSalary(salary);
-    }
-
-    public Employee() {
-
-    }
-
-    private void setSalary(int i) {}
-    private void setAge(int age) {}
-    private void setName(String name) {}
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public void printDetails() {
-        System.out.println(name +":"+ age +":"+ salary);
-    }
-}
-
-
-
-
-
-public class Test {
-
-    public static void main(String[] args) {
-
-        Employee e1 = new Employee();
-        Employee e2 = new Employee("Jack", 50);
-        Employee e3 = new Employee("Chloe", 40, 5000);
-
-        e1.printDetails();
-        e2.printDetails();
-        e3.printDetails();
-
-        System.out.println("");
-    }
-
 
 }
