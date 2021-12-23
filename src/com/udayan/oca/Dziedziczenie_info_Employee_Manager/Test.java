@@ -1,14 +1,10 @@
 package com.udayan.oca.Dziedziczenie_info_Employee_Manager;
 
-import java.util.AbstractList;
-import java.util.ArrayList;
-import java.util.List;
-
 interface I {
     public void displayI();
 }
 
-abstract class C2_Employee implements I {
+abstract class C2_Employee implements com.udayan.oca.Dziedziczenie_info_Employee_Manager.I {
     int salary=2212;
 
     public void displayC2() {
@@ -65,7 +61,7 @@ public class Test {
         ((C1_Manager)obj1).projektyManageraTopSecret(); //wymuszenie uruchomienia metody w Manager, która nie jest @Override
 
         //   I obj2 = new C2_Employee();  //'C2_Employee' is abstract; cannot be instantiated
-        I obj2 = new C1_Manager();  //niepełny obiekt Managera (zbudowany na fundamentach I) (pokaże tylko metody (z interfejsu I) zaimplementowane w Manager lub Employee )
+        com.udayan.oca.Dziedziczenie_info_Employee_Manager.I obj2 = new C1_Manager();  //niepełny obiekt Managera (zbudowany na fundamentach I) (pokaże tylko metody (z interfejsu I) zaimplementowane w Manager lub Employee )
         //int x=obj2.salary;   // XXXXXXX niewidoczny XXXXXX
         //obj2.projektyManageraTopSecret();  // XXXXXXX niewidoczny XXXXXX
         //obj2.displayC2(); // XXXXXXX niewidoczny XXXXXX
@@ -80,7 +76,7 @@ public class Test {
         s.bhp();           // odpalany w Manager bo jest @Override
         // s.projektyManageraTopSecret()  XXXXXXX niewidoczny - dostęp tylko dla pełnego objektu Manager XXXXXX
 
-        I t = obj1;  // t -obiekt interfejsu I (widoczne tylko metody zaimplentowane z interfejsu) - obj1 - niepełny Manager (zbudowany na fundamentach Employee)
+        com.udayan.oca.Dziedziczenie_info_Employee_Manager.I t = obj1;  // t -obiekt interfejsu I (widoczne tylko metody zaimplentowane z interfejsu) - obj1 - niepełny Manager (zbudowany na fundamentach Employee)
                      // ponieważ metoda z I displayI() jest zaimplementowana jest tylko w C2_Employee, więc ją odpalimy
         t.displayI();
 
