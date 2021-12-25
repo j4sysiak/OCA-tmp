@@ -40,7 +40,7 @@ class C1_Manager extends C2_Employee {
 
 }
 
-public class Test {
+public class Test1 {
 
     public static void main(String ... args)  {
 
