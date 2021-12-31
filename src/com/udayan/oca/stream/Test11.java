@@ -26,7 +26,7 @@ class Customer {
     }
 }
 
-public class Test {
+public class Test11 {
 
     private static Object AccountStatus;
 
