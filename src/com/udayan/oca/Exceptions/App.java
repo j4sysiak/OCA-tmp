@@ -1,37 +1,29 @@
 package com.udayan.oca.Exceptions;
 
-class LogFileException extends RuntimeException {
-}
+class LogFileException extends Exception { }
+class AccessViolationException extends RuntimeException { }
 
-class AccessViolationException extends Exception {
-}
-
-public class Test12 {
+public class App {
 
     public static void main(String[] args) throws LogFileException {
-
-        Test12 obj = new Test12();
+        App obj = new App();
         try {
             obj.open();
             obj.process();
-
+            //insert code here
         } catch (Exception e) {
-            System.out.println("ddddddddddddddddd");
+            System.out.println("Completed");
         }
-
         System.out.println("sssssssssssssssss");
     }
 
-    private void open() throws AccessViolationException {
+    private void open()   {
         System.out.println("open");
         throw new AccessViolationException();
     }
 
-    private void process() {
+    private void process()   {
         System.out.println("process");
-        throw new LogFileException();
+        //throw new LogFileException();
     }
-
-
-
 }
