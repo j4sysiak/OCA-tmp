@@ -39,6 +39,8 @@ public class Test7 {
         Tool bTool = new ReportTool();  //niepełny ReportTool - odpali wszystko z Tool oraz TYLKO @Override w ReportTool
         Tool cTool = new ExtraTool(); // niepełny ExtraTool
 
+
+
         callExport(aTool);
         callExport(bTool);
         callExport(cTool);
