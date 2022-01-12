@@ -14,7 +14,7 @@ interface I {
 
 class Book implements I {}
 
-public class Test {
+public class Test2b {
 
     public static void main(String[] args) {
 

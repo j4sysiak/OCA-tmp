@@ -1,7 +1,5 @@
 package com.udayan.oca.modyfikatory_dostepu.p2;
 
-
-import com.udayan.oca.interfejsy.b.Test;
 import com.udayan.oca.modyfikatory_dostepu.p1.Acc;
 
 public class Test7 extends Acc {
