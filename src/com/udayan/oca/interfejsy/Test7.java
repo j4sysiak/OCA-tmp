@@ -1,5 +1,7 @@
 package com.udayan.oca.interfejsy;
 
+import java.io.IOException;
+
 interface Exportable {
     public void export();
 }
@@ -34,7 +36,8 @@ class ExtraTool extends Tool   implements Exportable {
 }
 
 public class Test7 {
-    public static void main (String[] args) {
+
+    public static void main (String[] args)  {
         Tool aTool = new Tool(); // pełny Tool
         Tool bTool = new ReportTool();  //niepełny ReportTool - odpali wszystko z Tool oraz TYLKO @Override w ReportTool
         Tool cTool = new ExtraTool(); // niepełny ExtraTool
