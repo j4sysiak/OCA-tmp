@@ -2,13 +2,10 @@ package com.udayan.oca;
 
 public class Test17 {
     public static void main(String[] args) {
-        int[] arr = null;// = new long[]{1,2,3,4,5};
-        long i = 5;
-        try {
-       //     arr = null;
-            System.out.println(arr[11111111]);
-        } catch (Exception e) {
-            System.out.println();
-        }
+        char ch = 0; //pusty '\u0000'
+        int i = '0'; //48
+        ch += 'A';  // 0 + 65 = 75 --> (conversion from int to char) a 65 t 'A'
+        System.out.println(i);  //48
+        System.out.println(ch); //A
     }
 }
