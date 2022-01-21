@@ -2,10 +2,29 @@ package com.udayan.oca;
 
 public class Test17 {
     public static void main(String[] args) {
-        char ch = 0; //pusty '\u0000'
-        int i = '0'; //48
-        ch += 'A';  // 0 + 65 = 75 --> (conversion from int to char) a 65 t 'A'
-        System.out.println(i);  //48
-        System.out.println(ch); //A
+        int i = 0;
+        boolean a = true;
+        boolean b = false;
+        if(a & checkOdd(++i)){
+            if (a && checkOdd(i++)){
+                if (b | checkOdd(i++)){
+                    if(b || checkOdd(++i)){
+                        System.out.println("everything has passed");
+                    } else {
+                        System.out.println("4");
+                    }
+                } else {
+                    System.out.println("3");
+                }
+            } else {
+                System.out.println("2");
+            }
+        } else {
+            System.out.println("1");
+        }
+    }
+
+    public static boolean checkOdd(int i){
+        return (i % 2 == 1) ? true : false;
     }
 }
