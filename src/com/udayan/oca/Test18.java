@@ -13,8 +13,20 @@ public class Test18 {
                 System.out.println("Hello World");
             }
         };
+
+        //1
         print(() -> System.out.println("Hello World"));
 
+        //2
+        print(p);
+
+        //3
+        print(new Printer() {
+            @Override
+            public void print() {
+                System.out.println("Hello World");
+            }
+        });
 
 
         System.out.println("ssssssssssss");
