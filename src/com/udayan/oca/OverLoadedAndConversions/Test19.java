@@ -1,4 +1,4 @@
-package com.udayan.oca;
+package com.udayan.oca.OverLoadedAndConversions;
 
 interface G {}
 
@@ -11,6 +11,6 @@ public class Test19 implements G{
 
 //    Test19 d = new G(); //4  ERROR
 
-    Float e = (float) 9; //5
+    Float e = (float)1d; //5
 }
 
