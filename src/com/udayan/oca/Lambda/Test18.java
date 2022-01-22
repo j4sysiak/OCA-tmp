@@ -1,4 +1,4 @@
-package com.udayan.oca;
+package com.udayan.oca.Lambda;
 
 interface Printer {
     void print();
