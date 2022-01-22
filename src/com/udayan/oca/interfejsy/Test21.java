@@ -1,4 +1,4 @@
-package com.udayan.oca;
+package com.udayan.oca.interfejsy;
 
 interface I3 {
     public void met();
