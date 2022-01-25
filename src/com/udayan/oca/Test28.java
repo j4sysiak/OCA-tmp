@@ -1,18 +1,22 @@
 package com.udayan.oca;
 
+interface Result{
+    int flag();
+}
+
 public class Test28 {
     public static void main(String[] args) {
-        if (new Boolean("TrUe") == new Boolean(true)) {
-            System.out.println("This is true");
+        int x=10;
+        int a = (int)6.6;
+        if(   met( () -> {return x;})  ){
+            System.out.println("True");
         } else {
-            if (new Boolean("TrUe")) {
-                System.out.println("However, this is true");
-                if(new Boolean(true)){
-                    System.out.println("And this is true");
-                }
-            } else {
-                System.out.println("This is false");
-            }
+            System.out.println("False");
         }
     }
+
+    private static boolean met(Result result) {
+        return result.flag() > 5;
+    }
 }
+
