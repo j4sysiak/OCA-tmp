@@ -10,28 +10,33 @@ public class Test18 {
         Printer iprinter = new Printer() {
             @Override
             public void print(int a) {
-                System.out.println("Hello World");
+                System.out.println("Hello World 11111111111: " + a);
             }
         };
 
         //1
-        metoda((int a) -> System.out.println("Hello World"));
+        metoda(iprinter);
 
         //2
-        metoda(iprinter);
+        metoda((int a) -> System.out.println("Hello World 2222222222222: " + a));
+        metoda((a) -> System.out.println("Hello World 2222222222222: " + a));
+        metoda(a -> System.out.println("Hello World 2222222222222: " + a));
+        metoda(a -> System.out.println(a));
 
         //3
         metoda(new Printer() {
             @Override
             public void print(int a) {
-                System.out.println("Hello World");
+                System.out.println("Hello World 333333333: " + a);
             }
         });
-        System.out.println("ssssssssssss");
+
+
+        System.out.println("FINISH");
     }
 
     public static void metoda(Printer ipr) {
-        ipr.print(1);
+        ipr.print(100);
     }
 }
 
