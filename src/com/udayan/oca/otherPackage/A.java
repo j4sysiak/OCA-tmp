@@ -1,4 +1,4 @@
-package com.udayan.oca;
+package com.udayan.oca.otherPackage;
 
 public class A {
     static int a;

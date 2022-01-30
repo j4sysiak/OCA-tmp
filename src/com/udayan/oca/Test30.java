@@ -1,6 +1,8 @@
 package com.udayan.oca;
 
-public class Test30 extends B {
+import com.udayan.oca.otherPackage.A;
+
+public class Test30  {
     public static void main(String[] args) {
         int y=0;
         A aTest = new A();
@@ -38,21 +40,4 @@ public class Test30 extends B {
 }
 
 
-class B {
-    static int a;
 
-    int c = 10;  //default modifier
-    volatile int d=20;
-    private int e=30;
-    protected  int f=40;
-
-    static {
-         int b = 1;
-    }
-
-    public static void main(String[] args) {
-
-       // int y = B.b;
-       // y = B.a;
-    }
-}
