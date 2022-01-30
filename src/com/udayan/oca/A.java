@@ -2,7 +2,7 @@ package com.udayan.oca;
 
 public class A {
     static int a;
-    int c=10;
+    int c=10; //default modifier
 
     volatile int d=20;
     private int e=30;
