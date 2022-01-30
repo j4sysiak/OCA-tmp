@@ -1,4 +1,4 @@
-package com.udayan.oca.otherPackage;
+package com.udayan.oca.modyfikatory_dostepu.otherPackage;
 
 public class A {
     static int a;
