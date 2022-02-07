@@ -10,19 +10,9 @@ public class Test34 {
 //                }
 //            }
 
-
-            Integer I = 101111;
-            int y = I;
-
-            Byte B;
-            B=I.byteValue();
-            System.out.println("sss");
-
-            byte b =0;
-
-            b=B;
-            B=b;
-
-
+            Long L = 1111111111L;
+            int i =0;
+            i = Math.toIntExact(L);
+            System.out.println("sssssssss");
         }
     }
