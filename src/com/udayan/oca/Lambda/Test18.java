@@ -1,13 +1,13 @@
 package com.udayan.oca.Lambda;
 
-interface Printer {
+interface Printer2 {
     void print(int abc);
 }
 
 public class Test18 {
     public static void main(String[] args) {
 
-        Printer iprinter = new Printer() {
+        Printer2 iprinter = new Printer2() {
             @Override
             public void print(int a) {
                 System.out.println("Hello World 11111111111: " + a);
@@ -24,7 +24,7 @@ public class Test18 {
         metoda(a -> System.out.println(a));
 
         //3
-        metoda(new Printer() {
+        metoda(new Printer2() {
             @Override
             public void print(int a) {
                 System.out.println("Hello World 333333333: " + a);
@@ -35,7 +35,7 @@ public class Test18 {
         System.out.println("FINISH");
     }
 
-    public static void metoda(Printer ipr) {
+    public static void metoda(Printer2 ipr) {
         ipr.print(100);
     }
 }
