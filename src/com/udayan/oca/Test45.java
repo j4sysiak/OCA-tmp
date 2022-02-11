@@ -8,19 +8,24 @@ class A {
 
 public class Test45 {
     static A a = new A("A");
-    A b = new A("B");
+    static  Test45 d;
+    static {
+         d = new Test45("D");
+    }
+
+
+
 
     public static void main(String[] args) {
         Test45 c = new Test45("C");
     }
-    static {
-        Test45 d = new Test45("D");
-    }
-    A e = new A("E");
 
     public Test45(String a) {
         System.out.print(a +" ");
     }
+
+    A e = new A("E");
+    A b = new A("B");
 }
 
-
+//A B E D B E C
