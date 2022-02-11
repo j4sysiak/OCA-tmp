@@ -1,18 +1,20 @@
 package com.udayan.oca;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Test44 {
     public static void main(String[] args) {
-        int start = 1;
-        int sum = 0;
-        do {
-            start++;
-            if (start % 2 == 0) {
-                sum += start;
-            }
-        } while (++sum <= 10);
-        System.out.println(sum);
+
+        Integer a = 256;
+        Integer b = 256;
+
+        Byte c = byteValue(Long.valueOf(128));
+        Byte d = 128;
+
+        Integer e = 1;
+        Integer f = 1;
+
+        System.out.println((a == b));
+        System.out.println((c == d));
+        System.out.println((e == f));
+
     }
 }
