@@ -1,12 +1,57 @@
 package com.udayan.oca;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Test46 {
-    public static void main(String[] args) {
-        double a = 5;
-        boolean flag = a++ == 6 & --a == 5 || a++ ==5;
-        System.out.println(a+ " " + flag);
+
+    public static void main(String... args) {
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        list.add("1");
+        for (String el : list) {
+            if (el == "1") {
+                list.remove("1");
+            }
+        }
+        System.out.println(list);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
