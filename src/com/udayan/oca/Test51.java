@@ -2,23 +2,10 @@ package com.udayan.oca;
 
 public class Test51 {
     public static void main(String[] args) {
-        Order order = new Order(1);
-        System.out.println("I want to order a "+ order);
-    }
-}
-
-class Order {
-    private String myOrder;
-
-    Order(int x) {
-        switch (x) {
-            case 1:
-                this.myOrder = "steak";
-            case 2:
-                this.myOrder = "pizza";
-                break;
-            default:
-                this.myOrder = "salad";
-        }
+        Test51 a = new Test51();
+        int b = a.value; //(1)
+        int c = AClass.value; //(2)
+        int d = value, //(3)
+        e = a.value - 5 ; //(4)
     }
 }
