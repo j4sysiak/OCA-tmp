@@ -1,16 +1,14 @@
 package com.udayan.oca;
 
-abstract class Move{
-    abstract void moving();
-}
-public class Test51 extends Move {
-    void moving() {
-        System.out.println("moving...");
-    }
+public class Test51 {
+    int a = new Integer(1); //1
+    Integer b = 2; //2
+    static int c = 3; //3
+    public int d = 5; //4
+    protected int e = new Byte((byte) 3); //5
 
-    public static void main(String[] args) {
-        Move obj = null;
-        System.out.println("created...");
-        obj.moving();  // Exception in thread "main" java.lang.NullPointerException
+    public static void main(String ... a) {
+
+        System.out.println("aaaaaaaaaaaaaaaaaaaa");
     }
 }
