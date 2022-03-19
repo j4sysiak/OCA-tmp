@@ -1,17 +1,19 @@
 package com.udayan.oca;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Test52 {
     public static void main(String[] args) {
-        String question = "STR-.99";
-        int answer = (int) Double.parseDouble(question.substring(3));
-        switch (Math.abs(answer)) {
-            case 0:
-                System.out.print("Java ");
-            case 1:
-                System.out.print("Programming ");
-                break;
-            default:
-                System.out.print("Secrets");
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "First");
+        map.put(2, "Second");
+        map.put(3, "Third");
+        map.put(4, "Java");
+        for (String a: map) {
+            if(a.length()<=5){
+                System.out.println(a);
+            }
         }
     }
 }
