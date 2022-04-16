@@ -1,9 +1,25 @@
 package com.udayan.oca;
 
-public abstract class Test55  {
-    final static private double secretNumber = 777.7_____0; //1
-    abstract void Integer(); //2
-    int b ; //3
-    Float[ ] obj = new Double[1]; //4
-    static   int a ; //5
-}
+
+class  Test55 {
+
+
+    public static void main(String args[]) {
+//
+//            Integer a [][]  = new Object[][]   {{1}, {2}};
+//            Object [][] b = new int[0][];
+
+//            if (a.equals(b)){
+//                System.out.println("1");
+//            } else {
+//                if (a[0].length == b[0].length){
+//                    System.out.println("2");
+//                } else {
+//                    System.out.println("3");
+//                }
+//            }
+
+        System.out.println("ssssssssssss");
+
+        }
+    }
