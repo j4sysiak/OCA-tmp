@@ -1,25 +1,34 @@
 package com.udayan.oca;
 
+class  Test55 extends B {
+    public static void main(String[] args) {
+        A a = new Test55();
+        a.m1();
+    }
 
-class  Test55 {
+    @Override
+    public void m1() {
+
+    }
+}
+
+    class B implements A {
 
 
-    public static void main(String args[]) {
-//
-//            Integer a [][]  = new Object[][]   {{1}, {2}};
-//            Object [][] b = new int[0][];
+    public B() {
+        System.out.println("B");
+    }
 
-//            if (a.equals(b)){
-//                System.out.println("1");
-//            } else {
-//                if (a[0].length == b[0].length){
-//                    System.out.println("2");
-//                } else {
-//                    System.out.println("3");
-//                }
-//            }
 
-        System.out.println("ssssssssssss");
+        @Override
+        public void m1() {
 
         }
     }
+
+interface A {
+      void m1();
+//    {
+//        System.out.println("A");
+//    }
+}
