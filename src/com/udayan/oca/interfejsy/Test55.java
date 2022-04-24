@@ -3,13 +3,8 @@ package com.udayan.oca.interfejsy;
 class  Test55 extends B {
     public static void main(String[] args) {
         AI a = new Test55();
-        AI.m1();  // bo static
+        AI.m1();  // bo static - idzie do metody orgyginalnej w AI
         a.m2();
-    }
-
-    @Override
-    public void m2() {
-        System.out.println("C");
     }
 
     @Override
@@ -17,7 +12,17 @@ class  Test55 extends B {
 }
 
 abstract class B implements AI {
-   //public abstract void m1();
+      //public abstract void d2();
+    //  public abstract void m1();
+    //public abstract void m2();
+
+      public static void m1() {
+          System.out.println("m1 w B");
+      }
+
+    public void m2() {
+        System.out.println("m2 w B");
+    }
 
     public B() {
         System.out.println("B");
@@ -26,7 +31,7 @@ abstract class B implements AI {
 
 interface AI {
 //    default void d1();  // ERROR
-    abstract void d2();
+      public abstract void d2();   //OK
 //    final void d1();    // ERROR
 //    static void d1();   // ERROR
 //    private void d1();  // ERROR
